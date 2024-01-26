@@ -4,7 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cadastro</title>
+  <link rel="stylesheet" href="formpg.css">
+  <title>Cadastro</title
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -12,9 +16,6 @@
 <header>
   <nav>
       
-     <img src=""
-     height="150" width="150">
-    
       <ul>
         <li><a href="/Projeto_Integrador/home.html"> Home </li></a></li>
         <li><a href="#"> Projetos Sociais</li></a></li>
@@ -24,39 +25,40 @@
     
 </header>
 
+<main>
     <div>
       
       <h1 id="titulo" >Cadastro Proz Nós</h1>
-      <p id="sobtitulo">Coloque suas informações abaixo</p>
+      <h4 id="sobtitulo">Coloque suas informações abaixo</h4>
       <br>
     </div>
 
    <form>
      
-     <fieldset class="grupo">
-       
+     <div id=formulario>
        <div class="campo">
          
-          <label for="nome"><strong>Nome</strong></label>
-          <input type="text" name="nome" id="nome" required> 
-       
-          <label for="sobrenome"><strong>Sobrenome</strong></label>
-          <input type="text" name="sobrenome" id="sobrenome" required>
-       
+          <label for="nome"><strong>Nome*</strong></label>
+          <input type="text" placeholder="Digite seu Nome" name="nome" id="nome" required> 
        </div>
        
-     </fieldset>
+        <div class="campo">
+       
+          <label for="sobrenome"><strong>Sobrenome*</strong></label>
+          <input type="text" placeholder="Digite seu Sobrenome" name="sobrenome" id="sobrenome" required>
+       
+       </div>
      
        <div class="campo">
          
-         <label for="email"><strong>Email</strong></label>
-         <input type="email" name="email" id="email" required>
+         <label for="email"><strong>Email*</strong></label>
+         <input type="email" placeholder="Digite seu Email" name="email" id="email" required>
        
        </div>
        
        <div class="campo">
          
-         <label for="regiao"> <strong>De qual região você é? </strong></label>
+         <label for="regiao"> <strong>De qual região você é?*</strong></label>
          <select id="regiao" required>
            <option selected disabled value="">Selecione</option>
            <option>Norte</option>
@@ -69,8 +71,11 @@
          
        </div>
        
-       <button class="botao" type="submit">Concluir</button>
-       
-   </form>
-</body>
-
+       <a href="" id="button">Pronto!</a>
+       </div>
+   
+    </form>
+   </main>
+   
+   <footer></footer>
+  </body>
