@@ -1,0 +1,129 @@
+
+* {
+    font-size: 16px;
+}
+
+h1, h2, h3 {
+    font-family: 'Fredericka the Great', serif, cursive;
+    text-align: center;
+    text-transform: uppercase;
+    color: #D90404;
+}
+
+h4, h5, h6 {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    color: #F2B705;
+}
+
+h1 {
+    font-size: 600%;
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 400%;
+    font-weight: 200;
+}
+
+p, li, a {
+    font-family: 'Open Sans', sans-serif;
+    color: #404040;
+}
+
+h4 {
+    font-size: 150%;
+    font-weight: 150;
+    padding: 20px 0;
+}
+
+p.destaque {
+    font-size: 130%;
+    line-height: 1.8;
+    font-weight: 300;
+    text-align: center;
+    width: 60%;
+}
+
+/* ELEMENTOS DO HEADER*/
+
+header div#chamada h1 {
+    color: white;
+    text-shadow: 4px 6px 12px #000;
+    animation-name: HeaderH1-moverParaDireta;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+header div#chamada h4 {
+    font-size: 250%;
+    margin-bottom: 55px;
+    text-shadow: 4px 6px 12px #000;
+    animation-name: HeaderH1-moverParaEsquerda;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+}
+
+header div#chamada a {
+    font-size: 110%;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 20px 80px;
+    display: inline-block;
+    border-radius: 50px;
+    background: linear-gradient(rgba(7, 140, 49, 55) 0%, rgba(6, 89, 2, 35) 50%, rgba(6, 89, 2, 35) 100%);
+    animation-name: HeaderA-moverParaCima;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+}
+
+/*FOOTER*/
+
+footer div#info ul {
+    margin-left: 15px;
+    margin-bottom: 120px;
+}
+
+footer div#info li {
+    list-style: none;
+    color: white;
+    margin-bottom: 5px;
+}
+
+/*PROMOÇÕES*/
+
+div.pontos-chaves h4 {
+    color: black;
+}
+
+div.pontos-chaves h4:after {
+    display: block;
+    background-color: #078C31;
+    height: 5px;
+    width: 30%;
+    margin: 20px auto 10px;
+    content: "  ";
+}
+
+/*PROMÇÃO CARROSSEL*/
+
+/*SECAO CARDAPIO*/
+
+section#pizza p.destaque {
+    color: white;
+    width: 40%;
+}
+
+section#pizza ul li {
+    color: white;
+    list-style: none;
+    line-height: 1.9;
+    font-size: 90%;
+}
+
+

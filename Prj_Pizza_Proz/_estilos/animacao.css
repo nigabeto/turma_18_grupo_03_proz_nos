@@ -1,0 +1,39 @@
+@keyframes HeaderH1-moverParaDireta {
+    0% {
+        opacity: 0;
+        transform: translate(-75px);
+    }
+    70% {
+        transform: translate(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes HeaderH1-moverParaEsquerda {
+    0% {
+        opacity: 0;
+        transform: translate(50px);
+    }
+    50% {
+        transform: translate(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes HeaderA-moverParaCima {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
