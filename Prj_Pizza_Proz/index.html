@@ -7,23 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Pizzaria PROZ NÓS</title>
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans:wght@300;400;600;700&family=Pacifico&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="_estilos/animacao.css">
+    <link rel="stylesheet" href="_estilos/layout.css">
+    <link rel="stylesheet" href="_estilos/tipografia.css">
 </head>
 <body>
-<header>
+<header id="home">
     <nav>
         <div id="logo"></div>
         <ul id="esquerda">
             <li><a href="index.html">HOME</a></li>
-            <li><a href="#">CARDÁPIO</a></li>
+            <li><a href="_html/cardapio.html">CARDÁPIO</a></li>
             <li><a href="_html/promocoes.html">PROMOÇÕES</a></li>
             <li><a href="#">SOCIAL</a></li>
             <li><a href="#">SOBRE NÓS</a></li>
         </ul>
         <ul id="direita">
             <li><a id="criar-conta" href="#">CONTATO</a></li>
-
         </ul>
     </nav>
     <div id="chamada">
@@ -32,7 +36,9 @@
         <a href="_html/promocoes.html">FICOU COM ÁGUA NA BOCA? VEJA NOSSAS PROMOÇÕES!!!</a>
     </div>
 </header>
+
 <div id="transicao-rodape"></div>
+
 <footer>
     <div id="mapa">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14628.716577695406!2d-46.65710933431046!3d-23.56200864198598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b756463d61%3A0x9f3d1e6f7f40964!2sBela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1702412508871!5m2!1spt-BR!2sbr"
@@ -48,11 +54,14 @@
             <li>Fone: (11) 99882-4646</li>
         </ul>
         <div id="redes-sociais">
-            <img src="#" alt="Instagram">
-            <img src="#" alt="Facebook">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="logo-twitter"></ion-icon>
+            <ion-icon id="facebook" name="logo-facebook"></ion-icon>
         </div>
     </div>
     <div id="pizza-decoracao"></div>
 </footer>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
