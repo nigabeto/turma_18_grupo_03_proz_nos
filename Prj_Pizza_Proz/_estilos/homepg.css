@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+  
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url(../_imagens/pizza_amor.jpeg);
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 10vh;
+    border-top: 5px solid #078C31;
+    
+}
+
+nav {
+    width: 100%;
+    height: 200px;
+    margin: 10px auto;
+}
+
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 70px;
+    height: 40px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 100px;
+    font-size: 80%;
+}
+
+
+nav ul li a:hover {
+    background-color: #F2B705;
+    transition-duration: 0.8s;
+}
+
+/*main*/
+
+main {
+  
+  background-color: white;
+  
+  
+}
+
+      /*Primeira sessão do site*/
+
+#titulo-one {
+  
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40px;
+}
+
+#section-one {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+#conteudo-one {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  height: 200px;
+  width: 1000px;
+}
+
+#buttons-one {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+#section-one a {
+  
+  font-family: 'Pacifico', cursive;
+  color: white;
+  background-color: #F03733;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 5px 5px;
+  height: 40px;
+  width: 150px;
+  text-align: center;
+  font-size: 100%
+  
+}
+
+     /* Segunda sessão do Site*/
+
+#section-two {
+  
+  color: white;
+  background-color: #404040;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 150px;
+}
+
+#section-two strong {
+  
+  color: #F2B705;
+  
+}
+
+#section-two p {
+  
+  color: white;
+  
+}
+
+#section-two a {
+  
+  font-family: 'Pacifico', cursive;
+  color: #404040;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 5px 5px;
+  height: 40px;
+  width: 150px;
+  text-align: center;
+  font-size: 100%
+  
+}
+      /* Terceira sessão do Site */
+      
+#section-three {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  
+}      
+
+#conteudo-cardapio {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 2000px;
+}    
+
+#section-three a {
+  
+  font-family: 'Pacifico', cursive;
+  color: white;
+  background-color: #F03733;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 5px 5px;
+  height: 40px;
+  width: 150px;
+  text-align: center;
+  font-size: 100%
+  
+}
+
+      /*footer*/
+
+footer {
+  
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(../_imagens/pizza_amor.jpeg);
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    border-bottom: 5px solid #078C31;
+    
+}
+
+.rodape {
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 100px;
+    font-size: 80%;
+    margin-top: 60px;
+    gap: 1rem;
+}
+
+
+/*fontes*/
+
+.plogo {
+  
+  font-family: 'Pacifico', cursive;
+    color: #F2B705;
+  
+}
+
+h1 {
+    font-family: 'Fredericka the Great', serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: #D90404;
+    font-size: 400%;
+    font-weight: 200;
+}
+
+h5 {
+  
+  font-family: 'Fredericka the Great', serif;
+    text-transform: uppercase;
+    color: #D90404;
+    font-size: 200%;
+    font-weight: 200;
+  
+}
+
+h4, h2 {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    color: #F2B705;
+    font-size: 150%;
+    font-weight: 150;
+    padding: 20px 0;
+}
+
+p {
+  
+  font-family: 'Mukta', sans-serif;
+  font-size: 120%;
+  color: #404040;
+}
+
+strong {
+  
+  color: #D90404;
+  
+}
