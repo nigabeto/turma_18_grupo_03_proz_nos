@@ -5,7 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <script defer src="../_script/script_cardapio.js"></script>
+    <script defer type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script defer nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <title>Pizzaria PROZ NÓS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +16,25 @@
     <link rel="stylesheet" href="../_estilos/animacao.css">
     <link rel="stylesheet" href="../_estilos/layout.css">
     <link rel="stylesheet" href="../_estilos/tipografia.css">
+    <style>
+        /* Estilos adicionados para o carrinho de compras */
+        #carrinho {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para links */
+        a {
+            color: inherit; /* Mantém a cor original */
+            text-decoration: none; /* Remove o sublinhado */
+        }
+    </style>
 </head>
 <body>
 
@@ -33,21 +54,25 @@
         </ul>
     </nav>
 </header>
+<div id="carrinho">
+    Carrinho de Compras
+</div>
 
 <section id="pizza">
     <h2>SUA PIZZA DO SEU JEITO</h2>
     <p class="destaque">
-       Ninguem sabe fazer a sua pizza como nos. <br>Temos mais de 100 combinações para voce escolher como chegará sua pizza.
+        Ninguem sabe fazer a sua pizza como nos. <br>Temos mais de 100 combinações para voce escolher como chegará sua
+        pizza.
     </p>
     <div id="pizza-opcoes-mestre">
         <div class="pizza-opcoes">
             <h4>Sabores Tradicionais</h4>
             <ul>
-                <li>Pepperoni</li>
-                <li>Mussarela</li>
-                <li>Portuguesa</li>
-                <li>Bauru</li>
-                <li>Napolitana</li>
+                <li><a href="#" class="adicionar-item" data-item="Pepperoni">Pepperoni</a></li>
+                <li><a href="#" class="adicionar-item" data-item="Mussarela">Mussarela</a></li>
+                <li><a href="#" class="adicionar-item" data-item="Portuguesa">Portuguesa</a></li>
+                <li><a href="#" class="adicionar-item" data-item="Bauru">Bauru</a></li>
+                <li><a href="#" class="adicionar-item" data-item="Napolitana">Napolitana</a></li>
             </ul>
         </div>
         <div class="pizza-opcoes">
@@ -101,7 +126,5 @@
     </div>
 </section>
 
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
