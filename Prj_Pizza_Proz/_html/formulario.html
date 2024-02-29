@@ -35,11 +35,11 @@
     </div>
 
     <form>
-        <div id=formulario>
+      <div id="formulario"> 
             <div class="campo">
 
                 <label for="nome"><strong>Nome*</strong></label>
-                <input type="text" placeholder="Digite seu Nome" name="nome" id="nome" required>
+                <input type="text" placeholder="Digite seu Nome"name="nome" id="nome">
             </div>
 
             <div class="campo">
@@ -57,8 +57,8 @@
             </div>
 
             <div class="campo">
-                <label for="regiao"> <strong>De qual região você é?*</strong></label>
-                <select id="regiao" required>
+                <label id="regiao" for="regiao"> <strong>De qual região você é?*</strong></label>
+                <select id="regiao_option" required>
                     <option selected disabled value="">Selecione</option>
                     <option>Norte</option>
                     <option>Nordeste</option>
@@ -74,4 +74,6 @@
 </main>
 
 <footer></footer>
+<script src="../_script/script_formulario.js" defer></script>
 </body>
+</html>
