@@ -1,0 +1,11 @@
+
+1 - Clique no link abaixo para abrir a minha página do SQL Light Online
+
+https://sqliteonline.com/#sharedb=p%3Aappling
+
+
+2 - name 'pronoz' e senha 'pizza'
+
+3 - Os arquivos 'script' contém todos os scripts utilizados. Favor executar os que são "SELECT" para testar.
+
+keywords-p:appling

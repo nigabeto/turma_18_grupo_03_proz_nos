@@ -1,0 +1,93 @@
+INSERT INTO Status_Pedidos
+(nome_status_pedido)
+VALUES
+('status_pedido'),
+('Cadastrado'),
+('Preparando'),
+('Pronto'),
+('A Caminho'),
+('Entregue'),
+('Devolvido'),
+('Cancelado');
+
+INSERT INTO Tipos_Produtos
+(nome_tipo_produto)
+VALUES
+('Pizzas'),
+('Bebidas'),
+('Sobremesas');
+
+INSERT INTO Formas_Pagamentos
+(nome_forma_pagamento)
+VALUES
+('Crédito'),
+('Débito'),
+('PIX'),
+('Dinheiro');
+
+INSERT INTO Clientes
+(nome_cliente, cpf_cliente, telefone_cliente)
+VALUES
+('Gideao Gigante', '0123456789', '11999998888'),
+('Jose Roberto Bras', '195569874', '11912345678'),
+('Mauricio de Souza', '764589981', '11987654321');
+
+INSERT INTO Enderecos
+(cep_cliente, endereco_cliente,	numero_cliente, bairro_cliente,	cidade_cliente,	complemento_cliente, UF_cliente,fk_id_cliente)
+VALUES
+('21730123', 'Rua Consequente', '25 apto 1', 'Centro','Alphaville','','SP',2),
+('21730123', 'Rua Consequente', '25 apto 2', 'Centro','Alphaville','gret','SP',2),
+('31200321', 'Avenida Corsário', '1000', 'Jardins','São Paulo','','SP',1),
+('5810100', 'Rua Menor', '312', 'São Domingos','São Paulo','xxx','SP',3);
+
+INSERT INTO Produtos
+(nome_produto, desc_produto,fk_id_tipo_produto,valor_produto)
+VALUES
+('Pizza Calabresa',	'xxxx',	1, 10),
+('Pizza Mussarela',	'xxxx hhh',	1, 11.20),
+('Pizza Frango', 'wdfe htrh', 1, 12.50),
+('Coca 600 ml',	'fef uyiku', 2, 8.75),
+('Coca KS',	'bvcb ujyt', 2, 5.00),
+('Pepsi Lata', 'hyuu65u', 2, 3.25),
+('Brigadeiro', 'tyty', 3, 1.40),
+('Pudim', 'ui87io',	3, 4.60),
+('Bolo', 'w3err', 3, 2);
+
+SET datestyle TO SQL, DMY;
+INSERT INTO Pedidos
+(data_pedido, fk_id_cliente, fk_id_forma_pagamento, fk_id_status_pedido)
+VALUES
+('10/12/2023',	1,	1,5),
+('20/12/2023',	2,	3,5),
+('28/12/2023',	3,	2,7),
+('08/01/2024',	3,	4,6),
+('16/01/2024',	1,	2,5),
+('22/01/2024',	1,	1,7),
+('11/02/2024',	2,	4,5),
+('03/03/2024',	2,	3,5),
+('06/03/2024',	3,	2,1);
+
+INSERT INTO Pedidos_Produtos
+(fk_id_pedido, fk_id_produto, valor_produto, quantidade_produto)
+VALUES
+(1,	1,	10, 2),
+(1,	4,	8.75, 4),
+(1,	8,	4.60, 1),
+(2,	3,	12.50, 1),
+(3,	5,	5, 1),
+(4,	2,	11.20, 2),
+(5,	3,	12.5, 2),
+(5,	1,	10, 1),
+(5,	6,	3.25, 2),
+(5,	4,	8.75, 1),
+(6,	2,	11.20, 1),
+(6,	5,	5, 3),
+(7,	3,	12.5, 4),
+(7,	6,	3.25, 5),
+(7,	9,	2, 2),
+(7,	8,	4.60, 2),
+(8,	1,	10, 6),
+(8,	6,	3.25, 3),
+(8,	5,	5, 2),
+(8,	7,	1.40, 3),
+(9,	3,	12.50, 2);
