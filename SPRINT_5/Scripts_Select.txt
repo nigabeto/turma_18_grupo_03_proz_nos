@@ -1,1 +1,69 @@
 SET datestyle TO SQL, DMY;
+
+--------------------------
+Cardapio
+--------------------------
+SELECT tipos_produtos.nome_tipo_produto, nome_produto, valor_produto FROM Produtos
+INNER JOIN tipos_produtos
+ON tipos_produtos.id_tipo_produto = produtos.fk_id_tipo_produto
+ORDER by tipos_produtos.nome_tipo_produto ASC;
+
+--------------------------
+Produtos mais vendidos
+--------------------------
+SELECT produtos.nome_produto, SUM(pedidos_produtos.quantidade_produto) AS Qtd, SUM(pedidos_produtos.valor_produto * pedidos_produtos.quantidade_produto) AS Total
+FROM pedidos_produtos
+INNER JOIN produtos ON pedidos_produtos.fk_id_produto = produtos.id_produto
+INNER JOIN pedidos ON pedidos.id_pedido = pedidos_produtos.fk_id_pedido
+GROUP BY  produtos.nome_produto
+ORDER by SUM(pedidos_produtos.quantidade_produto) DESC, SUM(pedidos_produtos.valor_produto * pedidos_produtos.quantidade_produto) DESC;
+
+--------------------------------
+Tipos de Produtos mais vendidos
+---------------------------------
+SELECT tipos_produtos.nome_tipo_produto, SUM(pedidos_produtos.quantidade_produto) AS Qtd, SUM(pedidos_produtos.valor_produto * pedidos_produtos.quantidade_produto) AS Total
+FROM pedidos_produtos
+INNER JOIN produtos ON pedidos_produtos.fk_id_produto = produtos.id_produto
+INNER JOIN tipos_produtos ON tipos_produtos.id_tipo_produto = produtos.fk_id_tipo_produto
+GROUP BY  tipos_produtos.nome_tipo_produto
+ORDER by SUM(pedidos_produtos.quantidade_produto) DESC, SUM(pedidos_produtos.valor_produto * pedidos_produtos.quantidade_produto)  DESC;
+
+------------------------------------------------
+Clientes Mais Compram (qtd pedidos com sucesso)
+------------------------------------------------
+SELECT clientes.nome_cliente, COUNT(pedidos.id_pedido) AS Qtd
+FROM pedidos, clientes
+WHERE (clientes.id_cliente = pedidos.fk_id_cliente) AND (pedidos.fk_id_status_pedido < 6)
+GROUP BY  clientes.nome_cliente
+ORDER by COUNT(pedidos.id_pedido) DESC;
+
+---------------------------------------------
+Clientes Mais Compram (valores com sucesso)
+---------------------------------------------
+SELECT clientes.nome_cliente, SUM(pedidos_produtos.quantidade_produto) AS Qtd, SUM(pedidos_produtos.valor_produto * pedidos_produtos.quantidade_produto) AS Total, (SUM(pedidos_produtos.valor_produto * pedidos_produtos.quantidade_produto)/COUNT(DISTINCT pedidos.id_pedido)) AS Ticket_Medio
+FROM clientes, pedidos, pedidos_produtos
+WHERE (clientes.id_cliente = pedidos.fk_id_cliente) AND (pedidos.fk_id_status_pedido < 6) AND (pedidos.id_pedido = pedidos_produtos.fk_id_pedido)
+GROUP BY  clientes.nome_cliente
+ORDER by SUM(pedidos_produtos.quantidade_produto) DESC, SUM(pedidos_produtos.valor_produto) DESC;
+
+---------------------------------------------
+Formas Pagamento Mais Usadas
+---------------------------------------------
+SELECT formas_pagamentos.nome_forma_pagamento, COUNT(pedidos.id_pedido) AS Qtd FROM pedidos
+INNER JOIN formas_pagamentos
+ON formas_pagamentos.id_forma_pagamento = pedidos.fk_id_forma_pagamento
+GROUP BY formas_pagamentos.nome_forma_pagamento
+ORDER by COUNT(pedidos.id_pedido) DESC;
+
+---------------------------------------------
+Nota Fiscal dos Pedidos - Filtro por Data
+---------------------------------------------
+SET datestyle TO SQL, DMY;
+SELECT pedidos.data_pedido AS Data_Pedido, clientes.nome_cliente AS Cliente, formas_pagamentos.nome_forma_pagamento AS Forma_Pagto, pedidos.id_pedido AS Cupom_Fiscal, produtos.nome_produto AS Produto, pedidos_produtos.quantidade_produto AS Qtd, pedidos_produtos.valor_produto AS Valor_Unitario, (pedidos_produtos.valor_produto * pedidos_produtos.quantidade_produto) AS Valor_Total_Item
+FROM pedidos_produtos
+INNER JOIN produtos ON produtos.id_produto = pedidos_produtos.fk_id_produto
+INNER JOIN pedidos ON pedidos.id_pedido = pedidos_produtos.fk_id_pedido
+INNER JOIN formas_pagamentos ON formas_pagamentos.id_forma_pagamento = pedidos.fk_id_forma_pagamento
+INNER JOIN clientes ON clientes.id_cliente = pedidos.fk_id_cliente
+WHERE pedidos.data_pedido >= '01/03/2024';
+
